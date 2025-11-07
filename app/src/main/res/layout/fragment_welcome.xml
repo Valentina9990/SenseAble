@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@color/white">
+
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/subtitleTextView" />
+
+    <TextView
+        android:id="@+id/subtitleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Selecciona o captura un documento para convertirlo a audio"
+        android:drawableStart="@drawable/camara"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textColor="@color/gray"
+        android:lineSpacingExtra="4sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+        app:layout_constraintBottom_toTopOf="@+id/btnSelectDocument" />
+
+    <!-- Botón Seleccionar Documento -->
+    <Button
+        android:id="@+id/btnSelectDocument"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar documento de archivos"
+        android:textSize="16sp"
+        android:backgroundTint="@color/primary"
+        android:textColor="@color/white"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitleTextView"
+        app:layout_constraintBottom_toTopOf="@+id/btnConvertAudio" />
+
+    <!-- Botón Convertir a Audio -->
+    <Button
+        android:id="@+id/btnConvertAudio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Convertir a Audio"
+        android:textSize="16sp"
+        android:backgroundTint="@color/secondary"
+        android:textColor="@color/white"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSelectDocument"
+        app:layout_constraintBottom_toTopOf="@+id/btnHistorial" />
+
+    <!-- Botón Historial -->
+
+    <!-- Botón Configuración -->
+
+    <Button
+        android:id="@+id/btnHistorial"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:text="Ver Archivos Convertidos"
+        android:textColor="@color/primary"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnConfiguracion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConvertAudio" />
+
+    <Button
+        android:id="@+id/btnConfiguracion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Configuración de Audio"
+        android:textSize="14sp"
+        android:background="@android:color/transparent"
+        android:textColor="@color/primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHistorial"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
