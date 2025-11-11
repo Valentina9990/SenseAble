@@ -31,13 +31,11 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal">
-
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/idioma"
                 app:tint="@color/primary" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -47,13 +45,11 @@
                 android:textSize="18sp"
                 android:textStyle="bold" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:orientation="horizontal">
-
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_lang_spanish"
                 android:layout_width="0dp"
@@ -67,7 +63,6 @@
                 app:cornerRadius="12dp"
                 android:paddingTop="12dp"
                 android:paddingBottom="12dp"/>
-
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_lang_english"
                 android:layout_width="0dp"
@@ -90,13 +85,11 @@
             android:layout_marginTop="32dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
-
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/sonido"
                 app:tint="@color/primary" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -106,13 +99,11 @@
                 android:textSize="18sp"
                 android:textStyle="bold" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:orientation="horizontal">
-
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_voice_female"
                 android:layout_width="0dp"
@@ -126,7 +117,6 @@
                 app:cornerRadius="12dp"
                 android:paddingTop="12dp"
                 android:paddingBottom="12dp"/>
-
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_voice_male"
                 android:layout_width="0dp"
@@ -142,20 +132,17 @@
                 android:paddingBottom="12dp"/>
         </LinearLayout>
 
-        <!-- Sección Velocidad -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
-
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/velocidad"
                 app:tint="@color/primary" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -166,87 +153,18 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
-        <GridLayout
+        <com.google.android.material.slider.Slider
+            android:id="@+id/speed_slider"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:columnCount="3"
-            android:rowCount="2">
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_margin="4dp"
-                android:text="0.5x"
-                android:backgroundTint="@color/light_primary"
-                android:textColor="@color/primary"
-                android:textStyle="bold"
-                app:cornerRadius="12dp"
-                android:paddingTop="12dp"
-                android:paddingBottom="12dp"/>
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_margin="4dp"
-                android:text="0.75x"
-                android:backgroundTint="@color/light_primary"
-                android:textColor="@color/primary"
-                android:textStyle="bold"
-                app:cornerRadius="12dp"
-                android:paddingTop="12dp"
-                android:paddingBottom="12dp"/>
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_margin="4dp"
-                android:text="1x"
-                android:backgroundTint="@color/light_primary"
-                android:textColor="@color/primary"
-                android:textStyle="bold"
-                app:cornerRadius="12dp"
-                android:paddingTop="12dp"
-                android:paddingBottom="12dp"/>
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_margin="4dp"
-                android:text="1.5x"
-                android:backgroundTint="@color/light_primary"
-                android:textColor="@color/primary"
-                android:textStyle="bold"
-                app:cornerRadius="12dp"
-                android:paddingTop="12dp"
-                android:paddingBottom="12dp"/>
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_margin="4dp"
-                android:text="1.75x"
-                android:backgroundTint="@color/light_primary"
-                android:textColor="@color/primary"
-                android:textStyle="bold"
-                app:cornerRadius="12dp"
-                android:paddingTop="12dp"
-                android:paddingBottom="12dp"/>
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_margin="4dp"
-                android:text="2x"
-                android:backgroundTint="@color/light_primary"
-                android:textColor="@color/primary"
-                android:textStyle="bold"
-                app:cornerRadius="12dp"
-                android:paddingTop="12dp"
-                android:paddingBottom="12dp"/>
-
-        </GridLayout>
+            android:stepSize="0.25"
+            android:value="1.0"
+            android:valueFrom="0.5"
+            android:valueTo="2.0"
+            app:thumbColor="@color/secondary"
+            app:trackColorActive="@color/secondary"
+            app:trackColorInactive="@color/light_primary" />
 
     </LinearLayout>
 </ScrollView>
