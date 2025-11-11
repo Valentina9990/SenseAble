@@ -55,7 +55,8 @@ class WelcomeFragment : Fragment() {
         btnConvertAudio.setOnClickListener {
             if (selectedImageUri != null) {
                 Toast.makeText(requireContext(), "Iniciando proceso...", Toast.LENGTH_SHORT).show()
-                (activity as? MainActivity)?.navigateTo(ConversionFragment())
+                val conversionFragment = ConversionFragment.newInstance(selectedImageUri!!)
+                (activity as? MainActivity)?.navigateTo(conversionFragment)
 
             } else {
                 Toast.makeText(requireContext(), "Por favor, selecciona un documento primero", Toast.LENGTH_SHORT).show()
